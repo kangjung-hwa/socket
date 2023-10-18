@@ -1,0 +1,10 @@
+docker --version
+docker run -it --name my-ubuntu-container ubuntu:latest
+docker exec -it my-ubuntu-container /bin/bash
+apt update
+apt install -y g++
+
+g++ -o server server.cpp
+g++ -o client client.cpp
+./server
+./client
